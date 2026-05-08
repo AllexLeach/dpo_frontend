@@ -3,7 +3,7 @@
 **Цифровой строительный паспорт** - web-приложение для управления строительными проектами.  
 Позволяет отслеживать статус проектов, задачи по этапам, управлять документацией и ролями.
 
-🔗 **Демо:** [[ЦифроСтрой](https://localhost:5173)]  
+🔗 **Демо:** [[ЦифроСтрой](https://dpo-frontend-gamma.vercel.app/)]  
 📦 **Стек:** Vite + React + TypeScript, Ant Design, Tailwind CSS, Dexie (ORM для IndexedDB)
 
 ---
@@ -173,5 +173,5 @@
 
 ## 🔗 Ссылки
 
-- **Демо:** [ЦифроСтрой](https://localhost:5173) *(скоро)*
+- **Демо:** [ЦифроСтрой](https://dpo-frontend-gamma.vercel.app/)
 - **GitHub:** [AllexLeach/dpo_frontend](https://github.com/AllexLeach/dpo_frontend)
