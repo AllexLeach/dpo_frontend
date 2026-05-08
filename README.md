@@ -33,7 +33,73 @@
 ---
 
 ## 📂 Структура проекта
-!
+```
+📦 dpo_frontend/
+   📄 .gitignore
+   📄 index.html
+   📄 package-lock.json
+   📄 package.json
+   📄 README.md
+   📄 tsconfig.app.json
+   📄 tsconfig.json
+   📄 tsconfig.node.json
+   📄 vite.config.ts
+   📁 public/
+      📄 icon.svg
+   📁 src/
+      📄 index.css
+      📄 main.tsx
+      📁 app/
+         📄 App.tsx
+         📄 AppLayout.tsx
+         📄 Header.tsx
+         📄 ModalRoleSwitcher.tsx
+         📄 RoleContext.tsx
+         📄 utils.ts
+         📁 api/
+            📄 indexedDbApi.ts
+            📄 types.ts
+         📁 db/
+            📄 database.ts
+            📄 mockData.ts
+         📁 shared/
+            📄 ImageLoding.tsx
+            📄 ImageUpload.tsx
+            📄 StatusBadge.tsx
+      📁 assets/
+         📄 NoImage.webp
+         📄 photo-1.jpg
+         📄 photo-2.avif
+         📄 photo-3.jpg
+         📄 photo-4.webp
+         📄 photo-5.webp
+         📄 photo-6.webp
+         📄 photo-7.jpg
+         📄 photo-8.webp
+         📄 photo-9.webp
+      📁 features/
+         📁 admin/
+            📄 index.ts
+            📁 components/
+               📁 projects/
+                  📄 AdminEditButton.tsx
+                  📄 FormProject.tsx
+               📁 tasks/
+                  📄 DatePickerWithStatus.tsx
+                  📄 FormTask.tsx
+         📁 Projects/
+            📄 index.ts
+            📁 components/
+               📄 Project.tsx
+               📄 ProjectList.tsx
+               📄 ProjectListItem.tsx
+         📁 Tasks/
+            📄 index.ts
+            📁 components/
+               📄 PaginationSteps.tsx
+               📄 TaskDetails.tsx
+               📄 TaskLine.tsx
+```
 ---
 
 ## 📊 Мок-данные
