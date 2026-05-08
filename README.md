@@ -1,73 +1,111 @@
-# React + TypeScript + Vite
+# 🏗️ ЦифроСтрой
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Цифровой строительный паспорт** - web-приложение для управления строительными проектами.  
+Позволяет отслеживать статус проектов, задачи по этапам, управлять документацией и ролями.
 
-Currently, two official plugins are available:
+🔗 **Демо:** [[ЦифроСтрой](https://localhost:5173)]  
+📦 **Стек:** Vite + React + TypeScript, Ant Design, Tailwind CSS, Dexie (ORM для IndexedDB)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Функционал
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### ✅ Для всех пользователей
+- Просмотр списка строительных проектов (адаптивная сетка карточек)
+- Просмотр паспорта проекта: описание, статус, фото, задачи по этапам
+- Сортировка задач по датам начала для нормального таймлайна
+- Адаптивный интерфейс (мобильные устройства, планшеты, ПК)
 
-## Expanding the ESLint configuration
+### 👑 Дополнительно для администратора
+- Создание/редактирование/удаление проектов
+  - включает в себя загрузку фото (конвертация в Base64, хранение в IndexedDB)
+- Управление задачами проекта (CRUD)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🧠 Технически
+#### 😎 важные и интересные моменты
+- Роли `user` / `admin` (переключение через модальное окно, сохранение в `localStorage`)
+- Хранение данных в IndexedDB (Dexie ORM)
+- Кастомный `StatusBadge` под любой тип статусов
+- Пагинация в таймлайне задач (отображается только 5 задач)
+- Уведомления админа об успешной и иногда не очень успешной работе с данными (message)
+- Гибкая форма создания/редактирования проекта с предпросмотром фото
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📂 Структура проекта
+!
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📊 Мок-данные
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+При первом запуске автоматически создаётся база IndexedDB и заполняется тестовыми данными:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Проекты | Задачи |
+|---------|--------|
+| 9 проектов с разными статусами | 29 задач с привязкой к проектам |
+| Статусы: active, done, paused, canceled | Статусы: wait, process, finish, error |
+| Фото: URL + Base64 | Даты в хронологическом порядке |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🔄 Ролевая модель
+
+| Роль | Что доступно |
+|------|--------------|
+| 👤 **Пользователь** | Просмотр проектов и задач |
+| 👑 **Администратор** | Просмотр + создание/редактирование/удаление проектов и задач, загрузка фото |
+
+**Переключение:** иконка профиля → модальное окно → выбор роли  
+**Сохранение:** `localStorage` (роль не сбрасывается при обновлении страницы)
+
+---
+
+## 🗄️ Хранение данных
+
+- **База данных:** IndexedDB (браузерная NoSQL)
+- **ORM:** Dexie.js
+- **Таблицы:** `projects`, `tasks`
+- **Связи:** через поле `project_id` в задачах
+- **Каскадное удаление:** при удалении проекта удаляются все его задачи
+- **Фото:** хранятся в формате Base64 прямо в объекте проекта
+
+---
+
+## 📱 Адаптивность
+
+| Устройство | Сетка проектов | Таймлайн задач |
+|------------|----------------|----------------|
+| 💻 Десктоп | 3 колонки | Горизонтальный Steps |
+| 📟 Планшет | 1-2 колонки | Горизонтальный Steps |
+| 📱 Телефон | 1 колонка | Вертикальный Timeline + пагинация |
+
+---
+
+## 🔧 Обработка ошибок
+
+- Все запросы к api обёрнуты в `try/catch`
+- Пользователь получает уведомление через `message.error`
+- Детали ошибки пишутся в консоль для разработчика
+
+---
+
+## 🚧 Перспективы развития
+
+- [ ] Модуль файлового хранилища (документы, PDF, чертежи)
+- [ ] Экспорт паспорта проекта в PDF
+- [ ] Drag & drop для порядка задач
+- [ ] Фильтрация проектов по статусу
+- [ ] Поиск по названию проекта
+- [ ] Фильтрация задач по статусу и дате начала работ
+- [ ] Поиск по названию задачи
+### 🔮 на мега будущее
+- [ ] Проработка системы пользователей и их ролей(права пользователей)
+- [ ] Добавление личного кабинета и интеграция пользователя в систему проектов и задач
+- [ ] Отработка временного клиентского хранения и связи БД с backend'ом
+
+---
+
+## 🔗 Ссылки
+
+- **Демо:** [ЦифроСтрой](https://localhost:5173) *(скоро)*
+- **GitHub:** [AllexLeach/dpo_frontend](https://github.com/AllexLeach/dpo_frontend)

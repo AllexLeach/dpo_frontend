@@ -1,13 +1,16 @@
 import { Button } from "antd";
+import { useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { LuConstruction } from "react-icons/lu";
 import { NavLink } from "react-router";
+import { ModalRoleSwitcher } from "./ModalRoleSwitcher";
 
 export default function Header() {
+   const [modalOpen, setModalOpen] = useState(false);
    
    return(
       <div
-         className='z-50 h-auto w-full flex justify-between items-center bg-[#ffffff] box-border gap-4 md:gap-0'
+         className='fixed top-0 left-0 z-50 h-auto w-full flex justify-between items-center bg-[#ffffff] box-border gap-4 md:gap-0'
          style={{ padding: 10 }}
       >
          <NavLink
@@ -32,8 +35,10 @@ export default function Header() {
                shape="circle"
                icon={<CgProfile />}
                className="self-center"
+               onClick={() => setModalOpen(true)}
             />
          </div>
+         <ModalRoleSwitcher modalOpen={modalOpen} setModalOpen={setModalOpen} />
       </div>
    );
 }
