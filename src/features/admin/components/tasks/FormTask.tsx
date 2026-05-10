@@ -10,8 +10,8 @@ type FormDataTask = Omit<Task, 'id'>;
 const defaultFormData: FormDataTask = {
    name: '',
    description: '',
-   startDate: toNaiveISOString(new Date()),
-   endDate: toNaiveISOString(new Date((new Date()).getTime() + 7*1000*60*60*24)),
+   startDate: toNaiveISOString(new Date()).split('T')[0],
+   endDate: toNaiveISOString(new Date((new Date()).getTime() + 7*1000*60*60*24)).split('T')[0],
    status: 'process',
    project_id: '',
 };

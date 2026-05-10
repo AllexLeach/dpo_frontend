@@ -45,7 +45,10 @@ export function TaskDetails({ task, isEditing, handelOk, handelCancel }: TaskDet
    const errorMessage = 'Дата начала задачи должны быть меньше его окончания';
 
    useEffect(() => {
-      if (task) setFormData(task);
+      if (task) {
+         setFormData(task);
+         setDateStatus(defaultDateStatus);
+      }
    }, [isEditing]);
    
    return(
@@ -243,7 +246,22 @@ export function TaskDetails({ task, isEditing, handelOk, handelCancel }: TaskDet
                   className="w-full"
                   type="primary"
                   onClick={() => {
-                     handelOk(formData, true)
+                     if ((new Date(formData.startDate).getTime())>(new Date(formData.endDate).getTime())) {
+                        setDateStatus({
+                           start: {
+                              status: 'error',
+                              popover: true,
+                              errText: errorMessage,
+                           },
+                           end: {
+                              status: 'error',
+                              popover: false,
+                              errText: errorMessage,
+                           }
+                        });
+                     } else {
+                        handelOk(formData, true);
+                     }
                   }}
                >
                   Подтвердить

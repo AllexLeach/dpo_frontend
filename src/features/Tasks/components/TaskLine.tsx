@@ -94,24 +94,26 @@ export function TaskLine({ project }: TaskLineProps) {
                {isAdmin?
                   isEditing? null:
                   <div className="w-full flex flex-col gap-2">
-                     <div className="w-full flex gap-2 md:gap-5 justify-between">
-                        <Button
-                           className="w-full"
-                           danger
-                           onClick={() => handelDelete(tasks[currentTaskIndex])}
-                        >
-                           Удалить
-                        </Button>
-                        <Button
-                           className="w-full"
-                           type="primary"
-                           onClick={() => {
-                              setEditing(true);
-                           }}
-                        >
-                           Редактировать
-                        </Button>
-                     </div>
+                     {tasks.length > 0 && 
+                        <div className="w-full flex gap-2 md:gap-5 justify-between">
+                           <Button
+                              className="w-full"
+                              danger
+                              onClick={() => handelDelete(tasks[currentTaskIndex])}
+                           >
+                              Удалить
+                           </Button>
+                           <Button
+                              className="w-full"
+                              type="primary"
+                              onClick={() => {
+                                 setEditing(true);
+                              }}
+                           >
+                              Редактировать
+                           </Button>
+                        </div>
+                     }
                      <div className="w-full flex gap-2 md:gap-5 justify-between">
                         <Button
                            className="w-full"
