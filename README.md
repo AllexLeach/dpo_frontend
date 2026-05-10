@@ -43,7 +43,24 @@
    📄 tsconfig.app.json
    📄 tsconfig.json
    📄 tsconfig.node.json
+   📄 vercel.json
    📄 vite.config.ts
+   📁 dist/
+      📄 icon.svg
+      📄 index.html
+      📁 assets/
+         📄 icon-Dzyl0zkk.svg
+         📄 index-CNDP4Pnw.css
+         📄 NoImage-DeQy_RNi.webp
+         📄 photo-1-CqXnAEeB.jpg
+         📄 photo-2-BBL_7lLu.avif
+         📄 photo-3-wM1qBJmU.jpg
+         📄 photo-4-BJrurAyY.webp
+         📄 photo-5-CpfGMUs7.webp
+         📄 photo-6-CMKd9kdu.webp
+         📄 photo-7-qskFDWbC.jpg
+         📄 photo-8-BRVHaWvT.webp
+         📄 photo-9-DGgRLpGy.webp
    📁 public/
       📄 icon.svg
    📁 src/
@@ -62,10 +79,6 @@
          📁 db/
             📄 database.ts
             📄 mockData.ts
-         📁 shared/
-            📄 ImageLoding.tsx
-            📄 ImageUpload.tsx
-            📄 StatusBadge.tsx
       📁 assets/
          📄 NoImage.webp
          📄 photo-1.jpg
@@ -99,6 +112,12 @@
                📄 PaginationSteps.tsx
                📄 TaskDetails.tsx
                📄 TaskLine.tsx
+      📁 shared/
+         📄 index.ts
+         📁 components/
+            📄 ImageLoding.tsx
+            📄 ImageUpload.tsx
+            📄 StatusBadge.tsx
 ```
 ---
 

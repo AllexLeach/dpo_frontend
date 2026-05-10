@@ -127,16 +127,16 @@ extensions = {
     '.config.ts', '.config', '.config.js', '.prettierrc', '.conf.template', '.template',
     '.ts', '.tsx', '.jsx' '.js', '.d.ts',
     '.yml', '', '.json', '.md',
-   #  '.svg', '.webp', '.jpg', '.jpeg', '.png', '.avif'
+    '.svg', '.webp', '.jpg', '.jpeg', '.png', '.avif'
 }
 
 # проверка
-# show_project_structure(project_path, exclude_folders, extensions)
+show_project_structure(project_path, exclude_folders, extensions)
 
 # листинг
-create_code_listing(
-    project_path=project_path,
-    output_file="listed_frontend.txt",
-    extensions=extensions,
-    exclude_folders=exclude_folders
-)
+# create_code_listing(
+#     project_path=project_path,
+#     output_file="listed_frontend.txt",
+#     extensions=extensions,
+#     exclude_folders=exclude_folders
+# )

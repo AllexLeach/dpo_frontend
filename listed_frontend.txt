@@ -35,7 +35,7 @@ config
 #index.html
 
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/public/icon.svg" />
@@ -4130,7 +4130,7 @@ config
 **Цифровой строительный паспорт** - web-приложение для управления строительными проектами.  
 Позволяет отслеживать статус проектов, задачи по этапам, управлять документацией и ролями.
 
-🔗 **Демо:** [[ЦифроСтрой](https://localhost:5173)]  
+🔗 **Демо:** [[ЦифроСтрой](https://dpo-frontend-gamma.vercel.app/)]  
 📦 **Стек:** Vite + React + TypeScript, Ant Design, Tailwind CSS, Dexie (ORM для IndexedDB)
 
 ---
@@ -4300,7 +4300,7 @@ config
 
 ## 🔗 Ссылки
 
-- **Демо:** [ЦифроСтрой](https://localhost:5173) *(скоро)*
+- **Демо:** [ЦифроСтрой](https://dpo-frontend-gamma.vercel.app/)
 - **GitHub:** [AllexLeach/dpo_frontend](https://github.com/AllexLeach/dpo_frontend)
 
 #tsconfig.app.json
@@ -4371,6 +4371,17 @@ config
 }
 
 
+#vercel.json
+
+{
+   "rewrites": [
+      {
+         "source": "/(.*)",
+         "destination": "/index.html"
+      }
+   ]
+}
+
 #vite.config.ts
 
 import { defineConfig } from 'vite'
@@ -4384,6 +4395,30 @@ export default defineConfig({
       tailwindcss(),
    ],
 })
+
+
+#dist\index.html
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icon-Dzyl0zkk.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЦифроСтрой</title>
+    <script type="module" crossorigin src="/assets/index-BkwsK0L_.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CNDP4Pnw.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+
+#dist\assets\index-CNDP4Pnw.css
+
+/*! tailwindcss v4.2.4 | MIT License | https://tailwindcss.com */
+@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-font-weight:initial;--tw-duration:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000}}}@layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--color-blue-50:oklch(97% .014 254.604);--color-blue-500:oklch(62.3% .214 259.815);--color-blue-700:oklch(48.8% .243 264.376);--color-gray-50:oklch(98.5% .002 247.839);--color-gray-500:oklch(55.1% .027 264.364);--color-gray-600:oklch(44.6% .03 256.802);--color-gray-700:oklch(37.3% .034 259.733);--color-black:#000;--color-white:#fff;--spacing:.25rem;--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-base:1rem;--text-base--line-height:calc(1.5 / 1);--text-lg:1.125rem;--text-lg--line-height:calc(1.75 / 1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75 / 1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2 / 1.5);--font-weight-medium:500;--font-weight-semibold:600;--radius-md:.375rem;--radius-lg:.5rem;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4, 0, .2, 1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.\!visible{visibility:visible!important}.visible{visibility:visible}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.inset-0{inset:calc(var(--spacing) * 0)}.start{inset-inline-start:var(--spacing)}.end{inset-inline-end:var(--spacing)}.top-0{top:calc(var(--spacing) * 0)}.right-5{right:calc(var(--spacing) * 5)}.bottom-5{bottom:calc(var(--spacing) * 5)}.left-0{left:calc(var(--spacing) * 0)}.z-1{z-index:1}.z-50{z-index:50}.z-100{z-index:100}.box-border{box-sizing:border-box}.line-clamp-2{-webkit-line-clamp:2;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.line-clamp-3{-webkit-line-clamp:3;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.flex{display:flex}.grid{display:grid}.inline-block{display:inline-block}.h-\[400px\]{height:400px}.h-auto{height:auto}.h-full{height:100%}.h-screen{height:100vh}.max-h-\[400px\]{max-height:400px}.min-h-0{min-height:calc(var(--spacing) * 0)}.min-h-\[300px\]{min-height:300px}.min-h-\[500px\]{min-height:500px}.w-full{width:100%}.max-w-\[40\%\]{max-width:40%}.min-w-0{min-width:calc(var(--spacing) * 0)}.min-w-\[300px\]{min-width:300px}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.translate-x-\[10px\]{--tw-translate-x:10px;translate:var(--tw-translate-x) var(--tw-translate-y)}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-row{flex-direction:row}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.justify-start{justify-content:flex-start}.gap-1{gap:calc(var(--spacing) * 1)}.gap-2{gap:calc(var(--spacing) * 2)}.gap-4{gap:calc(var(--spacing) * 4)}.gap-5{gap:calc(var(--spacing) * 5)}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.bg-\[\#3d8eff\]{background-color:#3d8eff}.bg-\[\#ffffff\]{background-color:#fff}.bg-blue-50{background-color:var(--color-blue-50)}.bg-gray-50{background-color:var(--color-gray-50)}.object-cover{object-fit:cover}.text-center{text-align:center}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.text-\[20px\]{font-size:20px}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.text-\[\#1677FF\]{color:#1677ff}.text-black{color:var(--color-black)}.text-blue-500{color:var(--color-blue-500)}.text-gray-500{color:var(--color-gray-500)}.text-gray-600{color:var(--color-gray-600)}.text-gray-700{color:var(--color-gray-700)}.text-white{color:var(--color-white)}.opacity-0{opacity:0}.opacity-100{opacity:1}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.duration-300{--tw-duration:.3s;transition-duration:.3s}@media (hover:hover){.hover\:text-blue-700:hover{color:var(--color-blue-700)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}}@media (width>=48rem){.md\:gap-0{gap:calc(var(--spacing) * 0)}.md\:gap-5{gap:calc(var(--spacing) * 5)}.md\:text-left{text-align:left}.md\:text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}}@media (width>=64rem){.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width>=96rem){.\32 xl\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}}:root{font-synthesis:none;text-rendering:optimizelegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#fff;font-family:system-ui,Avenir,Helvetica,Arial,sans-serif;font-weight:400;line-height:1.5}*,html{margin:0;padding:0}*{box-sizing:border-box}html{width:100%;height:100svh;overflow-x:hidden}body{overscroll-behavior:contain;background-color:#eff6ff;width:100%;height:100%}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}
 
 
 #src\index.css
@@ -5207,221 +5242,6 @@ export const mockTasks: Task[] = [
    },
 ];
 
-#src\app\shared\ImageLoding.tsx
-
-import { useEffect, useState } from "react";
-import NoImage from '../../assets/NoImage.webp';
-import { Spin } from "antd";
-
-
-interface ImageLoadingProps {
-   src: string;
-   alt?: string;
-   width?: string | number;
-   height?: string | number;
-   className?: string;
-   style?: React.CSSProperties;
-}
-
-export default function ImageLoading({ src, alt, width, height, className, style }: ImageLoadingProps) {
-   const [imageSrc, setImageSrc] = useState(NoImage);
-   const [isLoading, setIsLoading] = useState(true);
-   const containerWidth = width? typeof width === 'string'? width: `${width}px`: 'auto';
-   const containerHeight = height? typeof height === 'string'? height: `${height}px`: 'auto';
-
-   useEffect(() => {
-      setImageSrc(src || NoImage);
-   }, [src]);
-
-   return(
-      <div
-         className={className || 'relative'}
-         style={{
-            width: containerWidth,
-            height: containerHeight
-         }}
-      >
-         <img
-            className={`
-               w-full h-full
-               object-cover rounded-lg flex-shrink-0 
-               transition-opacity duration-300
-               ${isLoading ? 'opacity-0' : 'opacity-100'}
-            `}
-            style={style}
-            src={imageSrc}
-            alt={alt}
-            onLoad={() => {
-               setIsLoading(false);
-            }}
-            onError={() => {
-               setImageSrc(NoImage);
-               setIsLoading(false);
-            }}
-         />
-         {isLoading && (
-            <div 
-               className="absolute inset-0 flex items-center justify-center rounded-lg"
-            >
-               <Spin size='medium' />
-            </div>
-         )}
-      </div>
-   );
-}
-
-#src\app\shared\ImageUpload.tsx
-
-import { Button, Image, Upload, type GetProp, type UploadFile, type UploadProps } from "antd";
-import { useEffect, useState } from "react";
-
-type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0];
-
-interface InputFileProps {
-  file: File | null;
-  setIconFile: (file: File | null) => void;
-}
-
-function getBase64(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = (error) => reject(error);
-  });
-}
-
-export function InputFile({ file, setIconFile }: InputFileProps) {
-  const [previewOpen, setPreviewOpen] = useState(false);
-  const [previewImage, setPreviewImage] = useState('');
-  const [fileList, setFileList] = useState<UploadFile[]>([]);
-
-  useEffect(() => {
-    if (file) {
-      const fileObj = Object.assign(file, {uid: `new-file-${file.name.split('_').shift()}`}) as FileType;
-
-      setFileList([
-        {
-          uid: `new-file-${file.name.split('_').shift()}`,
-          name: file.name,
-          status: 'done',
-          originFileObj: fileObj
-        }
-      ]);
-    } else setFileList([]);
-  }, [file]);
-
-  
-  const handlePreview = async (file: UploadFile) => {
-    if (!file.url && !file.preview) {
-      file.preview = await getBase64(file.originFileObj as File);
-    }
-
-    setPreviewImage(file.url || (file.preview as string));
-    setPreviewOpen(true);
-  };
-
-  const handleChange: UploadProps['onChange'] = ({ fileList: newFileList }) => {
-    const newFile = newFileList[newFileList.length-1];
-    setFileList(newFile? [{
-      uid: newFile.uid,
-      name: newFile.name,
-      status: 'done',
-      originFileObj: newFile.originFileObj
-    }]: []);
-    setIconFile(newFile? newFile.originFileObj as File: null);
-  }
-
-  const handelRemove: UploadProps['onRemove'] = () => {
-    setFileList([]);
-    setIconFile(null);
-  }
-
-  return (
-    <>
-      <Upload
-        prefixCls='w-full'
-        customRequest={() => {}} // пустая функция для отмены отправки на сервер по дефолту
-        listType="picture"
-        fileList={fileList}
-        onPreview={handlePreview}
-        onChange={handleChange}
-        onRemove={handelRemove}
-        accept="image/*"
-      >
-        <Button className='w-full' style={{ paddingLeft: 10, }}>
-          <span className='w-full flex align-start'>
-            {fileList.length? 'Изменить фото': 'Добавить фото'}
-          </span>
-        </Button>
-      </Upload>
-      {previewImage && (
-        <Image
-          wrapperStyle={{ display: 'none' }}
-          preview={{
-            visible: previewOpen,
-            onVisibleChange: (visible) => setPreviewOpen(visible),
-            afterOpenChange: (visible) => !visible && setPreviewImage(''),
-          }}
-          src={previewImage}
-        />
-      )}
-    </>
-  );
-};
-
-#src\app\shared\StatusBadge.tsx
-
-import type { ReactNode } from "react";
-import type { ProjectStatus } from "../api/types";
-
-interface StatusConfigField {
-   bg: string;
-   text: string;
-   color: string;
-}
-
-const defaultStatusConfig: Record<ProjectStatus, StatusConfigField> = {
-   active: { bg: '#E6F4FF', text: 'Активный', color: '#1677FF' },
-   done: { bg: '#E6FFE6', text: 'Завершён', color: '#00cd12' },
-   paused: { bg: '#FFF7E6', text: 'Приостановлен', color: '#e3aa00' },
-   canceled: { bg: '#FFE6E6', text: 'Отменён', color: '#cd0000' },
-} as const;
-
-interface StatusBadgeProps<T extends string | number | symbol = ProjectStatus> {
-   status: T;
-   text?: ReactNode;
-   config?: Record<T, Partial<StatusConfigField>>;
-}
-
-// ну что за имба? когда лень один тип в api/types поправить чисто)))
-// так-то штука мега полезная и расширяемая что большой +
-export default function StatusBadge<T extends string | number | symbol = ProjectStatus>({ status, text, config = {} as Record<T, Partial<StatusConfigField>> }: StatusBadgeProps<T>) {
-   const defaultConfigForType = (defaultStatusConfig as Record<string, StatusConfigField>);
-   const defaultForStatus = defaultConfigForType[status as string] || { bg: '#f5f5f5', text: String(status), color: '#666' };
-   
-   const customForStatus = config[status] || {};
-   
-   const mergedConfigField: StatusConfigField = {
-      bg: customForStatus.bg ?? defaultForStatus.bg,
-      color: customForStatus.color ?? defaultForStatus.color,
-      text: customForStatus.text ?? defaultForStatus.text,
-   };
-
-   return (
-      <div
-         className="rounded-md text-sm font-medium inline-block"
-         style={{
-            padding: '5px 10px',
-            background: mergedConfigField.bg,
-            color: mergedConfigField.color,
-         }}
-      >
-         {text || mergedConfigField.text}
-      </div>
-   );
-}
-
 #src\features\admin\index.ts
 
 export { FormProject } from './components/projects/FormProject';
@@ -5498,8 +5318,8 @@ export function AdminEditButton({ handelProject }: AdminEditButtonProps) {
 import { Button, Form, Input, Select, Spin } from "antd";
 import { useEffect, useState } from "react";
 import type { Project } from "../../../../app/api/types";
-import { InputFile } from "../../../../app/shared/ImageUpload";
 import { base64ToFile, urlToFile } from "../../../../app/utils";
+import { InputFile } from "../../../../shared";
 
 type FormDataProject = Omit<Omit<Project, 'id'>, 'photo_url'> & { icon: File | null };
 
@@ -5721,8 +5541,8 @@ type FormDataTask = Omit<Task, 'id'>;
 const defaultFormData: FormDataTask = {
    name: '',
    description: '',
-   startDate: toNaiveISOString(new Date()),
-   endDate: toNaiveISOString(new Date((new Date()).getTime() + 7*1000*60*60*24)),
+   startDate: toNaiveISOString(new Date()).split('T')[0],
+   endDate: toNaiveISOString(new Date((new Date()).getTime() + 7*1000*60*60*24)).split('T')[0],
    status: 'process',
    project_id: '',
 };
@@ -5984,11 +5804,10 @@ import { BiArrowBack } from "react-icons/bi";
 import { useNavigate, useParams } from "react-router";
 import type { Project } from "../../../app/api/types";
 import { api } from "../../../app/api/indexedDbApi";
-import ImageLoading from "../../../app/shared/ImageLoding";
 import { Tasks } from "../../Tasks";
-import StatusBadge from "../../../app/shared/StatusBadge";
 import { useRole } from "../../../app/RoleContext";
 import { FormProject } from "../../admin";
+import { ImageLoading, StatusBadge } from "../../../shared";
 
 export function Project() {
    const nav = useNavigate();
@@ -6234,11 +6053,10 @@ export function ProjectList() {
 import { Button, Card, Modal } from "antd";
 import type { Project } from "../../../app/api/types";
 import { useNavigate } from "react-router";
-import ImageLoading from "../../../app/shared/ImageLoding";
-import StatusBadge from "../../../app/shared/StatusBadge";
 import { useRole } from "../../../app/RoleContext";
 import { useState } from "react";
 import { FormProject } from "../../admin";
+import { ImageLoading, StatusBadge } from "../../../shared";
 
 interface ProjectListItemProps {
    project: Project;
@@ -6403,10 +6221,10 @@ export function PaginationSteps({ items, currentTaskIndex, setCurrentTaskIndex }
 
 import { Button, Descriptions, Input, Select } from "antd";
 import type { Task } from "../../../app/api/types";
-import StatusBadge from "../../../app/shared/StatusBadge";
 import { useEffect, useState } from "react";
 import { DatePickerWithStatus } from "../../admin";
 import type { InputStatus } from "antd/es/_util/statusUtils";
+import { StatusBadge } from "../../../shared";
 
 interface TaskDetailsProps {
    task: Task;
@@ -6448,7 +6266,10 @@ export function TaskDetails({ task, isEditing, handelOk, handelCancel }: TaskDet
    const errorMessage = 'Дата начала задачи должны быть меньше его окончания';
 
    useEffect(() => {
-      if (task) setFormData(task);
+      if (task) {
+         setFormData(task);
+         setDateStatus(defaultDateStatus);
+      }
    }, [isEditing]);
    
    return(
@@ -6646,7 +6467,22 @@ export function TaskDetails({ task, isEditing, handelOk, handelCancel }: TaskDet
                   className="w-full"
                   type="primary"
                   onClick={() => {
-                     handelOk(formData, true)
+                     if ((new Date(formData.startDate).getTime())>(new Date(formData.endDate).getTime())) {
+                        setDateStatus({
+                           start: {
+                              status: 'error',
+                              popover: true,
+                              errText: errorMessage,
+                           },
+                           end: {
+                              status: 'error',
+                              popover: false,
+                              errText: errorMessage,
+                           }
+                        });
+                     } else {
+                        handelOk(formData, true);
+                     }
                   }}
                >
                   Подтвердить
@@ -6755,24 +6591,26 @@ export function TaskLine({ project }: TaskLineProps) {
                {isAdmin?
                   isEditing? null:
                   <div className="w-full flex flex-col gap-2">
-                     <div className="w-full flex gap-2 md:gap-5 justify-between">
-                        <Button
-                           className="w-full"
-                           danger
-                           onClick={() => handelDelete(tasks[currentTaskIndex])}
-                        >
-                           Удалить
-                        </Button>
-                        <Button
-                           className="w-full"
-                           type="primary"
-                           onClick={() => {
-                              setEditing(true);
-                           }}
-                        >
-                           Редактировать
-                        </Button>
-                     </div>
+                     {tasks.length > 0 && 
+                        <div className="w-full flex gap-2 md:gap-5 justify-between">
+                           <Button
+                              className="w-full"
+                              danger
+                              onClick={() => handelDelete(tasks[currentTaskIndex])}
+                           >
+                              Удалить
+                           </Button>
+                           <Button
+                              className="w-full"
+                              type="primary"
+                              onClick={() => {
+                                 setEditing(true);
+                              }}
+                           >
+                              Редактировать
+                           </Button>
+                        </div>
+                     }
                      <div className="w-full flex gap-2 md:gap-5 justify-between">
                         <Button
                            className="w-full"
@@ -6845,5 +6683,226 @@ export function TaskLine({ project }: TaskLineProps) {
          message.error('Ошибка при удалении');
       }
    }
+}
+
+#src\shared\index.ts
+
+export { ImageLoading } from './components/ImageLoding';
+export { InputFile } from './components/ImageUpload';
+export { StatusBadge } from './components/StatusBadge';
+
+#src\shared\components\ImageLoding.tsx
+
+import { useEffect, useState } from "react";
+import NoImage from '../../assets/NoImage.webp';
+import { Spin } from "antd";
+
+
+interface ImageLoadingProps {
+   src: string;
+   alt?: string;
+   width?: string | number;
+   height?: string | number;
+   className?: string;
+   style?: React.CSSProperties;
+}
+
+export function ImageLoading({ src, alt, width, height, className, style }: ImageLoadingProps) {
+   const [imageSrc, setImageSrc] = useState(NoImage);
+   const [isLoading, setIsLoading] = useState(true);
+   const containerWidth = width? typeof width === 'string'? width: `${width}px`: 'auto';
+   const containerHeight = height? typeof height === 'string'? height: `${height}px`: 'auto';
+
+   useEffect(() => {
+      setImageSrc(src || NoImage);
+   }, [src]);
+
+   return(
+      <div
+         className={className || 'relative'}
+         style={{
+            width: containerWidth,
+            height: containerHeight
+         }}
+      >
+         <img
+            className={`
+               w-full h-full
+               object-cover rounded-lg flex-shrink-0 
+               transition-opacity duration-300
+               ${isLoading ? 'opacity-0' : 'opacity-100'}
+            `}
+            style={style}
+            src={imageSrc}
+            alt={alt}
+            onLoad={() => {
+               setIsLoading(false);
+            }}
+            onError={() => {
+               setImageSrc(NoImage);
+               setIsLoading(false);
+            }}
+         />
+         {isLoading && (
+            <div 
+               className="absolute inset-0 flex items-center justify-center rounded-lg"
+            >
+               <Spin size='medium' />
+            </div>
+         )}
+      </div>
+   );
+}
+
+#src\shared\components\ImageUpload.tsx
+
+import { Button, Image, Upload, type GetProp, type UploadFile, type UploadProps } from "antd";
+import { useEffect, useState } from "react";
+
+type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0];
+
+interface InputFileProps {
+  file: File | null;
+  setIconFile: (file: File | null) => void;
+}
+
+function getBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = (error) => reject(error);
+  });
+}
+
+export function InputFile({ file, setIconFile }: InputFileProps) {
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [previewImage, setPreviewImage] = useState('');
+  const [fileList, setFileList] = useState<UploadFile[]>([]);
+
+  useEffect(() => {
+    if (file) {
+      const fileObj = Object.assign(file, {uid: `new-file-${file.name.split('_').shift()}`}) as FileType;
+
+      setFileList([
+        {
+          uid: `new-file-${file.name.split('_').shift()}`,
+          name: file.name,
+          status: 'done',
+          originFileObj: fileObj
+        }
+      ]);
+    } else setFileList([]);
+  }, [file]);
+
+  
+  const handlePreview = async (file: UploadFile) => {
+    if (!file.url && !file.preview) {
+      file.preview = await getBase64(file.originFileObj as File);
+    }
+
+    setPreviewImage(file.url || (file.preview as string));
+    setPreviewOpen(true);
+  };
+
+  const handleChange: UploadProps['onChange'] = ({ fileList: newFileList }) => {
+    const newFile = newFileList[newFileList.length-1];
+    setFileList(newFile? [{
+      uid: newFile.uid,
+      name: newFile.name,
+      status: 'done',
+      originFileObj: newFile.originFileObj
+    }]: []);
+    setIconFile(newFile? newFile.originFileObj as File: null);
+  }
+
+  const handelRemove: UploadProps['onRemove'] = () => {
+    setFileList([]);
+    setIconFile(null);
+  }
+
+  return (
+    <>
+      <Upload
+        prefixCls='w-full'
+        customRequest={() => {}} // пустая функция для отмены отправки на сервер по дефолту
+        listType="picture"
+        fileList={fileList}
+        onPreview={handlePreview}
+        onChange={handleChange}
+        onRemove={handelRemove}
+        accept="image/*"
+      >
+        <Button className='w-full' style={{ paddingLeft: 10, }}>
+          <span className='w-full flex align-start'>
+            {fileList.length? 'Изменить фото': 'Добавить фото'}
+          </span>
+        </Button>
+      </Upload>
+      {previewImage && (
+        <Image
+          wrapperStyle={{ display: 'none' }}
+          preview={{
+            visible: previewOpen,
+            onVisibleChange: (visible) => setPreviewOpen(visible),
+            afterOpenChange: (visible) => !visible && setPreviewImage(''),
+          }}
+          src={previewImage}
+        />
+      )}
+    </>
+  );
+};
+
+#src\shared\components\StatusBadge.tsx
+
+import type { ReactNode } from "react";
+import type { ProjectStatus } from "../../app/api/types";
+
+interface StatusConfigField {
+   bg: string;
+   text: string;
+   color: string;
+}
+
+const defaultStatusConfig: Record<ProjectStatus, StatusConfigField> = {
+   active: { bg: '#E6F4FF', text: 'Активный', color: '#1677FF' },
+   done: { bg: '#E6FFE6', text: 'Завершён', color: '#00cd12' },
+   paused: { bg: '#FFF7E6', text: 'Приостановлен', color: '#e3aa00' },
+   canceled: { bg: '#FFE6E6', text: 'Отменён', color: '#cd0000' },
+} as const;
+
+interface StatusBadgeProps<T extends string | number | symbol = ProjectStatus> {
+   status: T;
+   text?: ReactNode;
+   config?: Record<T, Partial<StatusConfigField>>;
+}
+
+// ну что за имба? когда лень один тип в api/types поправить чисто)))
+// так-то штука мега полезная и расширяемая что большой +
+export function StatusBadge<T extends string | number | symbol = ProjectStatus>({ status, text, config = {} as Record<T, Partial<StatusConfigField>> }: StatusBadgeProps<T>) {
+   const defaultConfigForType = (defaultStatusConfig as Record<string, StatusConfigField>);
+   const defaultForStatus = defaultConfigForType[status as string] || { bg: '#f5f5f5', text: String(status), color: '#666' };
+   
+   const customForStatus = config[status] || {};
+   
+   const mergedConfigField: StatusConfigField = {
+      bg: customForStatus.bg ?? defaultForStatus.bg,
+      color: customForStatus.color ?? defaultForStatus.color,
+      text: customForStatus.text ?? defaultForStatus.text,
+   };
+
+   return (
+      <div
+         className="rounded-md text-sm font-medium inline-block"
+         style={{
+            padding: '5px 10px',
+            background: mergedConfigField.bg,
+            color: mergedConfigField.color,
+         }}
+      >
+         {text || mergedConfigField.text}
+      </div>
+   );
 }
 

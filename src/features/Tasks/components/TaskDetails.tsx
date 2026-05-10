@@ -1,9 +1,9 @@
 import { Button, Descriptions, Input, Select } from "antd";
 import type { Task } from "../../../app/api/types";
-import StatusBadge from "../../../app/shared/StatusBadge";
 import { useEffect, useState } from "react";
 import { DatePickerWithStatus } from "../../admin";
 import type { InputStatus } from "antd/es/_util/statusUtils";
+import { StatusBadge } from "../../../shared";
 
 interface TaskDetailsProps {
    task: Task;

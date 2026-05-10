@@ -1,11 +1,10 @@
 import { Button, Card, Modal } from "antd";
 import type { Project } from "../../../app/api/types";
 import { useNavigate } from "react-router";
-import ImageLoading from "../../../app/shared/ImageLoding";
-import StatusBadge from "../../../app/shared/StatusBadge";
 import { useRole } from "../../../app/RoleContext";
 import { useState } from "react";
 import { FormProject } from "../../admin";
+import { ImageLoading, StatusBadge } from "../../../shared";
 
 interface ProjectListItemProps {
    project: Project;

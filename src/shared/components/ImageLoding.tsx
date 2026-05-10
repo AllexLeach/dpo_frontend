@@ -12,7 +12,7 @@ interface ImageLoadingProps {
    style?: React.CSSProperties;
 }
 
-export default function ImageLoading({ src, alt, width, height, className, style }: ImageLoadingProps) {
+export function ImageLoading({ src, alt, width, height, className, style }: ImageLoadingProps) {
    const [imageSrc, setImageSrc] = useState(NoImage);
    const [isLoading, setIsLoading] = useState(true);
    const containerWidth = width? typeof width === 'string'? width: `${width}px`: 'auto';

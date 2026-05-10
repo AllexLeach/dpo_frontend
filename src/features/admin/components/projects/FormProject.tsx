@@ -1,8 +1,8 @@
 import { Button, Form, Input, Select, Spin } from "antd";
 import { useEffect, useState } from "react";
 import type { Project } from "../../../../app/api/types";
-import { InputFile } from "../../../../app/shared/ImageUpload";
 import { base64ToFile, urlToFile } from "../../../../app/utils";
+import { InputFile } from "../../../../shared";
 
 type FormDataProject = Omit<Omit<Project, 'id'>, 'photo_url'> & { icon: File | null };
 

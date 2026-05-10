@@ -4,11 +4,10 @@ import { BiArrowBack } from "react-icons/bi";
 import { useNavigate, useParams } from "react-router";
 import type { Project } from "../../../app/api/types";
 import { api } from "../../../app/api/indexedDbApi";
-import ImageLoading from "../../../app/shared/ImageLoding";
 import { Tasks } from "../../Tasks";
-import StatusBadge from "../../../app/shared/StatusBadge";
 import { useRole } from "../../../app/RoleContext";
 import { FormProject } from "../../admin";
+import { ImageLoading, StatusBadge } from "../../../shared";
 
 export function Project() {
    const nav = useNavigate();

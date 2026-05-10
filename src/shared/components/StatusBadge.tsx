@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { ProjectStatus } from "../api/types";
+import type { ProjectStatus } from "../../app/api/types";
 
 interface StatusConfigField {
    bg: string;
@@ -22,7 +22,7 @@ interface StatusBadgeProps<T extends string | number | symbol = ProjectStatus> {
 
 // ну что за имба? когда лень один тип в api/types поправить чисто)))
 // так-то штука мега полезная и расширяемая что большой +
-export default function StatusBadge<T extends string | number | symbol = ProjectStatus>({ status, text, config = {} as Record<T, Partial<StatusConfigField>> }: StatusBadgeProps<T>) {
+export function StatusBadge<T extends string | number | symbol = ProjectStatus>({ status, text, config = {} as Record<T, Partial<StatusConfigField>> }: StatusBadgeProps<T>) {
    const defaultConfigForType = (defaultStatusConfig as Record<string, StatusConfigField>);
    const defaultForStatus = defaultConfigForType[status as string] || { bg: '#f5f5f5', text: String(status), color: '#666' };
    
